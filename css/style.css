@@ -1,0 +1,101 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html{
+    font-size: calc(1em + 1vw);
+    
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #817f7f60;
+}
+
+.logo-btn{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: black;
+}
+
+header{
+    padding: 0 0 1rem 0;
+    display:block
+}
+
+body section nav ul{
+    margin: 1rem 0 0 0;
+    padding: 2rem;
+}
+
+.flexbox-container1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+
+.produkter-btn{
+    background-color: #262626;
+    color: #fff;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 50px;
+    margin: 0.5rem;
+}
+
+.flexbox-container2 {
+    display: flex;
+    justify-content: center;
+}
+
+.venstre-knapper, .høyre-knapper {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.venstre-knapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+.høyre-knapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+}
+
+.kjente-merker-btn {
+    background-color: #262626;
+    color: #fff;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 50px;
+    margin: 0.2rem;
+    border-radius: 10px;
+    flex-grow: 1;
+}
+
+@media only screen and (min-width: 600px){
+    body{
+        background-color: lightblue;
+    }
+}
