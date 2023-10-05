@@ -30,9 +30,20 @@ header{
     display:block
 }
 
-body section nav ul{
-    margin: 1rem 0 0 0;
-    padding: 2rem;
+.produkt-container{
+    text-align: center;
+}
+
+.produkt-bilde{
+    background-color: #262626;
+    color: #fff;
+    min-width: 250px;
+    height: 250px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 250px;
+    margin: 0.5rem;
+    border-radius: 2rem;
 }
 
 .flexbox-container1{
@@ -40,10 +51,11 @@ body section nav ul{
     flex-direction: column;
     justify-content: center;
     align-items: center;    
+    padding: 0;
 }
 
 
-.produkter-btn{
+.hdb-btn{
     background-color: #262626;
     color: #fff;
     min-width: 250px;
@@ -58,6 +70,15 @@ body section nav ul{
 .flexbox-container2 {
     display: flex;
     justify-content: center;
+}
+
+.flexbox-container3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding: 0; 
+    
 }
 
 .venstre-knapper, .høyre-knapper {
@@ -85,7 +106,7 @@ body section nav ul{
 }
 
 @media only screen and (min-width: 1094px){
-    .produkter-btn{
+    .hdb-btn{
         min-width: 300px;
         min-height: 100px;
         border-radius: 10px;
@@ -98,10 +119,13 @@ body section nav ul{
     .kjente-merker-btn{
         min-width: 250px;
         min-height: 50px;
-    
+    }
     .grid-container{
         grid-template-columns: 1fr 1fr 1fr;
     }
+    
+    .flexbox-container3{
+        flex-direction: row;
     }
 }
 
