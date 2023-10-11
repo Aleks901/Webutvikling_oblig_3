@@ -8,15 +8,17 @@ html{
     
 }
 
-.grid-container{
+#grid-container{
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-areas: "topp" "Hovedomraade" "Fot";
 }
 
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     background-color: #817f7f60;
+    max-width: 1400px;
 }
 
 .logo-btn{
@@ -27,9 +29,25 @@ body{
 
 header{
     padding: 1rem 0.5rem 1rem 0.5rem;
-    display:block
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
 }
 
+main{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+footer{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
 .produkt-container{
     text-align: center;
 }
@@ -120,8 +138,25 @@ header{
         min-width: 250px;
         min-height: 50px;
     }
-    .grid-container{
+    #grid-container{
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    header{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    main{
+        grid-column-start: 2;
+        grid-column-end: 2;
+    }
+
+    footer{
+        grid-column-start: 2;
+        grid-column-end: 2;
     }
     
     .flexbox-container3{
