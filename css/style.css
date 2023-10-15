@@ -17,7 +17,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     background-color: #817f7f60;
-    max-width: 1400px;
 }
 
 .logo-btn {
@@ -45,7 +44,16 @@ footer {
 }
 
 .produkt-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.produkt {
+    flex-basis: calc(33.33% - 1rem); /* 3 columns with a small gap between */
     text-align: center;
+    margin: 0.5rem;
 }
 
 .produkt-bilde {
@@ -53,11 +61,7 @@ footer {
     color: #fff;
     min-width: 250px;
     height: 250px;
-    text-align: center;
     text-decoration: none;
-    line-height: 250px;
-    margin: 0.5rem;
-    border-radius: 2rem;
 }
 
 .flexbox-container1 {
@@ -117,6 +121,11 @@ footer {
 }
 
 @media only screen and (min-width: 600px) {
+
+    .product {
+        flex-basis: calc(50% - 1rem); /* 2 columns on smaller screens */
+    }
+
     .hdb-btn {
         min-width: 300px;
         min-height: 100px;
@@ -126,6 +135,10 @@ footer {
     }
 
     .flexbox-container1 {
+        flex-direction: row;
+    }
+
+    .flexbox-container3 {
         flex-direction: row;
     }
 
@@ -150,7 +163,4 @@ footer {
         grid-column: 2 / span 1;
     }
 
-    .flexbox-container3 {
-        flex-direction: row;
-    }
 }
