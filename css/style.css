@@ -17,7 +17,7 @@ li{
 #grid-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: "topp" "Hovedomraade" "Fot";
+    grid-template-areas: "Header" "Hoved" "Footer";
 }
 
 body {
@@ -38,6 +38,12 @@ header {
     grid-row: 1 / span 1;
 }
 
+.top-area{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 main {
     grid-column: 1 / span 1;
     grid-row: 2 / span 1;
@@ -50,11 +56,34 @@ footer {
     font-size: small;
 }
 
+.navbar {
+    display: none;
+}
+
 .produkt-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+}
+
+.responsive {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #242424;
+    margin: 0;
+    padding: 0;
+    top: 40px;
+    width: 100%;
+    list-style: none;
+}
+
+.responsive a {
+    color: #fff;
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
 }
 
 .produkt {
@@ -156,6 +185,7 @@ footer {
 
     #grid-container {
         grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "Header Header Header" "Hoved Hoved Hoved" "Footer Footer Footer";
     }
 
     header {
@@ -168,6 +198,18 @@ footer {
 
     footer {
         grid-column: 2 / span 1;
+    }
+
+    #ham, .fa-magnifying-glass {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        list-style: none;
+        margin: 0;
     }
 
 }

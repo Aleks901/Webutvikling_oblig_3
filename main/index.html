@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" type=text/css href="../css/style.css">
+    <link href="../css/font/css/fontawesome.css" rel="stylesheet">
+    <link href="../css/font/css/brands.css" rel="stylesheet">
+    <link href="../css/font/css/solid.css" rel="stylesheet">
     <title>Alekssineskoprodukter</title>
 </head>
 
@@ -12,10 +15,19 @@
     <!-- Legger til header for logo / Favoritter / Handlevogn / osv -->
     <div id="grid-container">
         <header>
-            <nav>
-                <span>
-                    <a href="index.html" class="logo-btn">Logo</a>
-                </span>       
+            <nav class="top-area">
+                <a href="index.html" class="logo-btn">Logo</a>
+                <div>
+                    <!-- Ikon for søkefunksjonen -->
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <!-- Ikon for navigasjonsmenyen på små skjermer -->
+                    <i id="ham" class="fa-solid fa-bars"></i>
+                </div>
+                <ul class="navbar">
+                    <!-- Navigasjonsmeny med lenker -->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produkt.html">Produkter</a></li>
+                </ul>       
             </nav>
         </header>
 
@@ -56,6 +68,20 @@
         </main>
         <footer> <p>Made by Aleksander Jenssen</p> </footer>
     </div>
-    
+    <script>
+        // Finn navigasjonsmenyen
+        let x = document.querySelector(".navbar")
+        // Legg til en hendelseslytter for klikk på menyikonet (ham)
+        document.getElementById("ham").addEventListener("click", (e) => {
+            // Sjekk om navigasjonsmenyen allerede har klassen "responsive"
+            if (x.className === "navbar") {
+                // Hvis ikke, legg til klassen for responsiv meny
+                x.className += " responsive";
+            } else {
+                // Hvis den allerede har klassen, fjern den for å gjøre menyen skjult
+                x.className = "navbar"
+            }
+        })
+    </script>
 </body>
 </html>
