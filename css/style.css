@@ -120,6 +120,18 @@ footer {
     flex-grow: 1;
 }
 
+.kjøp-knapp{
+    display: flex;
+    background-color: #296ad2;
+    color: #fff;
+    min-width: 250px;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    line-height: 50px;
+}
+
 .flexbox-container2 {
     display: flex;
     justify-content: center;
