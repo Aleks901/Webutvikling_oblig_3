@@ -8,55 +8,71 @@
     <link href="../css/font/css/fontawesome.css" rel="stylesheet">
     <link href="../css/font/css/brands.css" rel="stylesheet">
     <link href="../css/font/css/solid.css" rel="stylesheet">
-    <title>Produkt</title>
+    <title>Produkt side</title>
 </head>
 <body>
-    <header>
-        <nav class="top-area">
-            <a href="index.html" class="logo-btn">Logo</a>
-            <div>
-                <!-- Ikon for søkefunksjonen -->
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <!-- Ikon for navigasjonsmenyen på små skjermer -->
-                <i id="ham" class="fa-solid fa-bars"></i>
-            </div>
-            <ul class="navbar">
-                <!-- Navigasjonsmeny med lenker -->
-                <li><a href="index.html">Home</a></li>
-                <li><a href="produkt.html">Produkter</a></li>
-            </ul>       
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Produkt</h2>
-            <article class="produkt-container">
-                <ul>
-                    <li class="produkt">
-                        <a href="produkter.html">
-                            <img src="https://placehold.co/250x250" alt="Bilde av produkt">
-                        </a>
-                        <p>Produkt Navn</p>
-                        <a href="#" class="kjøp-knapp">Kjøp</a>
-                    </li>
-                </ul>
-            </article>
-        </section>
-    </main>
-    <script>
-        // Finn navigasjonsmenyen
-        let x = document.querySelector(".navbar")
-        // Legg til en hendelseslytter for klikk på menyikonet (ham)
-        document.getElementById("ham").addEventListener("click", (e) => {
-            // Sjekk om navigasjonsmenyen allerede har klassen "responsive"
-            if (x.className === "navbar") {
-                // Hvis ikke, legg til klassen for responsiv meny
-                x.className += " responsive";
-            } else {
-                // Hvis den allerede har klassen, fjern den for å gjøre menyen skjult
-                x.className = "navbar"
-            }
-        })
-    </script>
+    <div id="grid-container">
+        <header>
+            <nav class="top-area">
+                <a href="index.html" class="logo-btn">Logo</a>
+                <div>
+                    <input type="search" id="searchbar">
+                    <!-- Ikon for søkefunksjonen -->
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <!-- Ikon for navigasjonsmenyen på små skjermer -->
+                    <i id="ham" class="fa-solid fa-bars"></i>
+                </div>
+                <ul class="navbar">
+                    <!-- Navigasjonsmeny med lenker -->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produkter.html">Produkter</a></li>
+                    <li><a href="#">Til kassa</a></li>
+                    <li><a href="#">Om oss</a></li>
+                </ul>       
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2>Produkt</h2>
+                <article class="produkt-container">
+                    <ul>
+                        <li class="produkt">
+                            <li class="prod-bilde-container">
+                            <a href="produkter.html">
+                                <img src="https://placehold.co/250x250" alt="Bilde av produkt">
+                            </a>
+                            <p>Produkt Navn</p>
+                            </li>
+                            <li id="shoe-btn-container">
+                                <button class="shoesize_btn">39</button>
+                                <button class="shoesize_btn">40</button>
+                                <button class="shoesize_btn">41</button>
+                                <button class="shoesize_btn">42</button>
+                                <button class="shoesize_btn">43</button>
+                                <button class="shoesize_btn">44</button>
+                            </li>
+                            <a href="#" class="kjøp-knapp">Kjøp</a>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+        <script>
+            // Finn navigasjonsmenyen
+            let x = document.querySelector(".navbar")
+            // Legg til en hendelseslytter for klikk på menyikonet (ham)
+            document.getElementById("ham").addEventListener("click", (e) => {
+                // Sjekk om navigasjonsmenyen allerede har klassen "responsive"
+                if (x.className === "navbar") {
+                    // Hvis ikke, legg til klassen for responsiv meny
+                    x.className += " responsive";
+                } else {
+                    // Hvis den allerede har klassen, fjern den for å gjøre menyen skjult
+                    x.className = "navbar"
+                }
+            })
+        </script>
+        <footer> <p>Made by Aleksander Jenssen</p> </footer>
+    </div>
 </body>
 </html>
