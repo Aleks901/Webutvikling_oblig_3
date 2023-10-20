@@ -1,3 +1,5 @@
+/* Koden er 100% selv skrevet men har brukt Chatgpt for å lære underveis dersom jeg har behøvd å vite noe
+   Css arket er dårlig organisert, jeg har prøvd mitt beste på å få en rekkefølge på det men pga jeg har gått så mye frem og tilbake så ble det litt rot.*/
 * {
     box-sizing: border-box;
 }
@@ -6,8 +8,9 @@ html {
     font-size: calc(1em + 1vw);
 }
 
-p {
-    margin: 0;
+a {
+    text-decoration: none;
+    color: #242424;
 }
 
 h2{
@@ -26,12 +29,6 @@ li{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "Header" "Hoved" "Footer";
-}
-
-body header nav ul a{
-    text-decoration: none;
-    color: black;
-    padding-right: 10px;
 }
 
 body {
@@ -59,7 +56,7 @@ header {
 }
 
 .search-bar{
-    display: inline-block;
+display: inline-block;
 }
 
 .hidden{
@@ -72,10 +69,25 @@ header {
     align-items: center;
 }
 
+#color-btn-container{
+    display: flex;
+    flex-direction: row;
+}
+
 #shoe-btn-container{
     display: flex;
     flex-direction: row;
-    padding: 10px 0 0 0;
+}
+
+#sbs-ikoner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#spacebtw{
+    padding-left: 5px;
 }
 
 .shoesize_btn{
@@ -89,6 +101,37 @@ header {
     line-height: 40px;
 }
 
+.color-btn1, .color-btn2, .color-btn3, .color-btn4, .color-btn5, .color-btn6{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+}
+
+.color-btn1{
+    background-color: #ff0000;
+}
+
+.color-btn2{
+    background-color: #296ad2;
+}
+
+.color-btn3{
+    background-color: #ff00ea;
+}
+
+.color-btn4{
+    background-color: #00ff2a;
+}
+
+.color-btn5{
+    background-color: #00eeff;
+}
+
+.color-btn6{
+    background-color: #694adb;
+}
 main {
     grid-column: 1 / span 1;
     grid-row: 2 / span 1;
@@ -139,9 +182,6 @@ footer {
     margin: 0.5rem;
 }
 
-#searchbar{
-    display: none;
-}
 
 
 .flexbox-container1 {
@@ -260,8 +300,9 @@ footer {
         display: none;
     }
 
-    #searchbar{
-        display: inline-block;
+    #search-bar{
+        display: flex;
+        align-items: center;
     }
 
     .navbar {
