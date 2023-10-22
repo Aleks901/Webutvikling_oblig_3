@@ -24,49 +24,65 @@
                 </div>
                 <ul class="navbar">
                     <!-- Navigasjonsmeny med lenker -->
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="produkter.html">Produkter</a></li>
-                    <li><a href="#">Til kassa</a></li>
-                    <li><a href="#">Om oss</a></li>
+                    <li><a href="index.html" id="home-nav">Home</a></li>
+                    <li><a href="produkt.html" id="produkter-nav">Produkter</a></li>
+                    <li><a href="#" id="kassa-nav">Til kassa</a></li>
+                    <li><a href="#" id="om-nav">Om oss</a></li>
                 </ul>       
             </nav>
         </header>
         <main>
-            <section>
-                <h2>Produkt</h2>
-                <article class="produkt-container">
-                    <ul>
-                        <li class="produkt">
-                            <li class="prod-bilde-container">
-                                <p>Produkt navn</p>
-                                <img src="https://placehold.co/250x250" alt="Bilde av produkt">
-                                <p>1337kr</p>
-                                </li>
 
-                            <li id="color-btn-container">
-                                <button class="color-btn1"></button>
-                                <button class="color-btn2"></button>
-                                <button class="color-btn3"></button>
-                                <button class="color-btn4"></button>
-                                <button class="color-btn5"></button>
-                                <button class="color-btn6"></button>
-                            </li>
-                            <li id="shoe-btn-container">
-                                <button class="shoesize_btn">39</button>
-                                <button class="shoesize_btn">40</button>
-                                <button class="shoesize_btn">41</button>
-                                <button class="shoesize_btn">42</button>
-                                <button class="shoesize_btn">43</button>
-                                <button class="shoesize_btn">44</button>
-                            </li>
-                            <li>
+            <section>
+
+                <h2>Produkt</h2>
+
+                <article class="produkt-container">
+
+                    <div class="produkt">
+                        <aside class="prod-bilde-container">
+                            <p>Produktnavn</p>
+                            <img src="https://placehold.co/250x250" alt="Bilde av produkt" id="mobilt-produkt">
+                            <img src="https://placehold.co/350x350" alt="Bilde av produkt" id="desktop-produkt">
+                            <ul class="thumbnail-container">
+                                <li>
+                                    <img src="https://placehold.co/70x70" alt="Minibilde-av-produkt">
+                                    <img src="https://placehold.co/70x70" alt="Minibilde-av-produkt">
+                                    <img src="https://placehold.co/70x70" alt="Minibilde-av-produkt">
+                                    <img src="https://placehold.co/70x70" alt="Minibilde-av-produkt">
+                                    
+                                </li>
+                            </ul>
+                            <p>1337kr</p>
+                        </aside>
+        
+                        <aside id="color-btn-container">
+                            <button class="color-btn1"></button>
+                            <button class="color-btn2"></button>
+                            <button class="color-btn3"></button>
+                            <button class="color-btn4"></button>
+                            <button class="color-btn5"></button>
+                            <button class="color-btn6"></button>
+                        </aside>
+        
+                        <aside id="shoe-btn-container">
+                            <button class="shoesize_btn">39</button>
+                            <button class="shoesize_btn">40</button>
+                            <button class="shoesize_btn">41</button>
+                            <button class="shoesize_btn">42</button>
+                            <button class="shoesize_btn">43</button>
+                            <button class="shoesize_btn">44</button>
+                        </aside>
+        
+                        <aside>
                             <a href="#" class="kjøp-knapp">Kjøp</a>
-                            </li>
-                        </li>
-                    </ul>
+                        </aside>
+                    </div>
                 </article>
             </section>
         </main>
+        
+        
         <script>
             // Finn navigasjonsmenyen
             let x = document.querySelector(".navbar")

@@ -1,5 +1,6 @@
-/* Koden er 100% selv skrevet men har brukt Chatgpt for å lære underveis dersom jeg har behøvd å vite noe
-   Css arket er dårlig organisert, jeg har prøvd mitt beste på å få en rekkefølge på det men pga jeg har gått så mye frem og tilbake så ble det litt rot.*/
+/* Koden er 100% selv skrevet men har brukt Chatgpt for å lære underveis dersom jeg har behøvd å lære noe spesifikt.
+   Eksempel av bruk: Grid, hvordan legge elementer fra header/body/main/footer der de skal på riktig kolonne og riktig rekke.
+   Ellers enn det er det små ting som hvordan organisere koden bedre (Ikke nødvendigvis bra svar) Eller hvordan erstatte divs med semantisk korrekte alternativer.*/
 * {
     box-sizing: border-box;
 }
@@ -25,10 +26,10 @@ li{
     list-style-type: none;
 }
 
-#grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "Header" "Hoved" "Footer";
+header {
+    padding: 1rem 0.5rem;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
 }
 
 body {
@@ -37,16 +38,30 @@ body {
     background-color: #817f7f60;
 }
 
+main {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+}
+
+footer {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    text-align: center;
+    font-size: small;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "Header" "Hoved" "Footer";
+}
+
+
+
 .logo-btn {
     text-decoration: none;
     text-transform: capitalize;
     color: black;
-}
-
-header {
-    padding: 1rem 0.5rem;
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
 }
 
 .top-area{
@@ -56,7 +71,7 @@ header {
 }
 
 .search-bar{
-display: inline-block;
+    display: inline-block;
 }
 
 .hidden{
@@ -72,11 +87,13 @@ display: inline-block;
 #color-btn-container{
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 #shoe-btn-container{
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 #sbs-ikoner{
@@ -99,6 +116,7 @@ display: inline-block;
     width: 50px;
     justify-content: center;
     line-height: 40px;
+    border-radius: 10px;
 }
 
 .color-btn1, .color-btn2, .color-btn3, .color-btn4, .color-btn5, .color-btn6{
@@ -107,6 +125,7 @@ display: inline-block;
     height: 50px;
     width: 50px;
     justify-content: center;
+    border-radius: 10px;
 }
 
 .color-btn1{
@@ -132,16 +151,9 @@ display: inline-block;
 .color-btn6{
     background-color: #694adb;
 }
-main {
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
-}
 
-footer {
-    grid-column: 1 / span 1;
-    grid-row: 3 / span 1;
-    text-align: center;
-    font-size: small;
+.thumbnail-container{
+    display: none;
 }
 
 .navbar {
@@ -154,6 +166,7 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
 
 .responsive {
     display: flex;
@@ -182,7 +195,9 @@ footer {
     margin: 0.5rem;
 }
 
-
+#desktop-produkt{
+    display: none;
+}
 
 .flexbox-container1 {
     display: flex;
@@ -214,6 +229,7 @@ footer {
     justify-content: center;
     text-decoration: none;
     line-height: 50px;
+    border-radius: 5px;
 }
 
 .flexbox-container2 {
@@ -300,6 +316,14 @@ footer {
         display: none;
     }
 
+    #mobilt-produkt{
+        display: none;
+    }
+
+    #desktop-produkt{
+        display: flex;
+    }
+
     #search-bar{
         display: flex;
         align-items: center;
@@ -311,6 +335,20 @@ footer {
         gap: 1rem;
         list-style: none;
         margin: 0;
+    }
+
+    #home-nav, #produkter-nav, #kassa-nav, #om-nav{
+        color: #fff;
+        background-color: #242424;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .thumbnail-container{
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 5px 0 0 0;
     }
 
 }
